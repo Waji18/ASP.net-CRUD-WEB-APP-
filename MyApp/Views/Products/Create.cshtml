@@ -1,0 +1,33 @@
+﻿@model MyApp.Models.Product
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h3>Create an Product</h3>
+
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label for="ProductName">Product Name</label>
+        <input type="text" class="form-control" asp-for="ProductName" />
+    </div>
+    <div class="form-group">
+        <label for="Price">Price</label>
+        <input type="number" class="form-control" asp-for="Price" />
+    </div>
+    <div class="form-group">
+        <label for="Quantity">Quantity</label>
+        <input type="number" asp-for="Quantity" class="form-control" />
+    </div>
+   <div class="form-group">
+        <label for="Tags">Tags</label>
+        <input type="text" asp-for="Tags" class="form-control" />
+    </div>
+   
+    <div class="form-group">
+        <label for="Categories">Category</label>
+        <input type="text" asp-for="Categories" class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

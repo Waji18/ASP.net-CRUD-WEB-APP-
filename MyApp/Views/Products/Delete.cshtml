@@ -1,0 +1,14 @@
+﻿@model MyApp.Models.Product
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h3>Are you sure you want to delete this item??</h3>
+
+<p>@Model.ProductName</p>
+<p>@Model.Price $</p>
+
+<form asp-action="Delete" method="post">
+    <input type="hidden" asp-for="id" />
+    <input type="submit" class="btn btn-danger" value="Delete" />
+</form>
